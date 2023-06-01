@@ -1309,6 +1309,7 @@ __metadata:
   dependencies:
     copy-webpack-plugin: ^5.0.0
     hello-wasm-pack: ^0.1.0
+    wasm-game-of-life: "file:../pkg"
     webpack: ^4.29.3
     webpack-cli: ^3.1.0
     webpack-dev-server: ^3.1.5
@@ -5366,6 +5367,13 @@ __metadata:
   version: 1.1.2
   resolution: "vm-browserify@npm:1.1.2"
   checksum: 10a1c50aab54ff8b4c9042c15fc64aefccce8d2fb90c0640403242db0ee7fb269f9b102bdb69cfb435d7ef3180d61fd4fb004a043a12709abaf9056cfd7e039d
+  languageName: node
+  linkType: hard
+
+"wasm-game-of-life@file:../pkg::locator=create-wasm-app%40workspace%3A.":
+  version: 0.1.0
+  resolution: "wasm-game-of-life@file:../pkg#../pkg::hash=4ff92f&locator=create-wasm-app%40workspace%3A."
+  checksum: 6bed03ab34399464f444b85dc0f1c26984ec3a94212b5437b775af566dde44fd5fab9124696da9353b875dbf769131daa10ecf274177e93f4c936c155497c8d8
   languageName: node
   linkType: hard
 
