@@ -2,6 +2,7 @@ mod utils;
 
 use std::fmt;
 use std::fmt::Formatter;
+use js_sys::Math;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
@@ -50,7 +51,9 @@ impl Universe {
     pub fn new(width: u32, height: u32) -> Universe {
         let cells = (0..width * height)
             .map(|i| {
-                if i % 2 == 0 || i % 7 == 0 {
+                let rand = Math::random();
+
+                if rand < 0.5 {
                     Cell::Alive
                 } else {
                     Cell::Dead
