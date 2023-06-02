@@ -5372,8 +5372,8 @@ __metadata:
 
 "wasm-game-of-life@file:../pkg::locator=create-wasm-app%40workspace%3A.":
   version: 0.1.0
-  resolution: "wasm-game-of-life@file:../pkg#../pkg::hash=2b4961&locator=create-wasm-app%40workspace%3A."
-  checksum: ee3817f8976c58dc34b7840712de068548680ec8ca57348bd76b83f11a383d25529d4ca4364079cd27c0dd3001fd70983e2d7a772579a70892204876d10e48cb
+  resolution: "wasm-game-of-life@file:../pkg#../pkg::hash=d1ceaf&locator=create-wasm-app%40workspace%3A."
+  checksum: 4ddbf9aa3d65e52ba829d4d5621549c7181e47e3c16e675b6769822bb9873702dedd47fa2c483a66352ba0d403fa6515d6a000782afdd6563fbd4e601649ad8c
   languageName: node
   linkType: hard
 
