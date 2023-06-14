@@ -8,14 +8,13 @@ const ALIVE_COLOR = "#000000";
 const FRAME_RATE = 50;
 
 // Setup universe
-const universe = Universe.new(256, 128);
-const height = universe.height();
-const width = universe.width();
+const universe = Universe.random(256, 128);
+const size = universe.size();
 
 // Setup canvas
 const canvas = document.getElementById("game-of-life-canvas");
-canvas.width = CELL_SIZE * width;
-canvas.height = CELL_SIZE * height;
+canvas.width = size.dx * CELL_SIZE;
+canvas.height = size.dy * CELL_SIZE;
 
 const ctx = canvas.getContext('2d');
 
@@ -30,13 +29,13 @@ function loop(time) {
         universe.tick();
 
         // Draw cells
-        const cells = new Uint8Array(memory.buffer, universe.cells(), width * height);
+        const cells = new Uint8Array(memory.buffer, universe.cells(), size.dx * size.dy);
 
         ctx.beginPath();
 
-        for (let row = 0; row < height; ++row) {
-            for (let col = 0; col < width; ++col) {
-                const idx = row * width + col;
+        for (let row = 0; row < size.dy; ++row) {
+            for (let col = 0; col < size.dx; ++col) {
+                const idx = row * size.dx + col;
 
                 ctx.fillStyle = cells[idx] === Cell.Alive ? ALIVE_COLOR : DEAD_COLOR;
                 ctx.fillRect(col * CELL_SIZE, row * CELL_SIZE, CELL_SIZE, CELL_SIZE);
